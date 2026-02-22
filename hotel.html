@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODIED - Hotel Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="hotel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="admin-page">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-logo" style="text-align: center;">
+            <a href="index.html" class="logo">FOODIED</a>
+            <p id="restaurantTypeDisplay" style="color: var(--text-muted); font-size: 11px; margin-top: 5px;">Restaurant
+            </p>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active"><i class="fas fa-home"></i> My Restaurant</a></li>
+            <li><a href="#"><i class="fas fa-utensils"></i> Manage Menu</a></li>
+            <li><a href="#"><i class="fas fa-motorcycle"></i> Deliveries</a></li>
+            <li><a href="#"><i class="fas fa-star"></i> Reviews</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="SignUp_LogIn_Form.html#login" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Topbar -->
+        <header class="admin-header">
+            <div class="header-left">
+                <h2>Welcome, <span id="mgrNameDisplay">Manager</span>!</h2>
+                <p id="locationDisplay" style="color: var(--text-muted); font-size: 14px;"><i
+                        class="fas fa-map-marker-alt"></i> Location</p>
+            </div>
+            <div class="header-right">
+                <button id="addDriverBtn" class="btn btn-primary"
+                    style="padding: 10px 20px; border-radius: 8px; display: none;"><i class="fas fa-plus"></i> Add
+                    Driver</button>
+                <div class="admin-profile">
+                    <img src="https://ui-avatars.com/api/?name=Manager&background=FF6B35&color=fff" id="profileImg"
+                        alt="Manager" class="profile-img">
+                    <span id="mgrUsernameDisplay">Manager</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(140, 198, 63, 0.2); color: #8CC63F;">
+                    <i class="fas fa-concierge-bell"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Today's Orders</h3>
+                    <p>42</p>
+                    <span class="trend positive"><i class="fas fa-arrow-up"></i> 5%</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(255, 107, 53, 0.2); color: #FF6B35;">
+                    <i class="fas fa-wallet"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Today's Earnings</h3>
+                    <p>$840.50</p>
+                    <span class="trend positive"><i class="fas fa-arrow-up"></i> 12%</span>
+                </div>
+            </div>
+            <div class="stat-card" id="driverStatCard" style="display: none;">
+                <div class="stat-icon" style="background: rgba(78, 205, 196, 0.2); color: #4ECDC4;">
+                    <i class="fas fa-motorcycle"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Active Drivers</h3>
+                    <p>4 / 5</p>
+                    <span class="trend neutral">Currently Online</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant Menu Preview -->
+        <div class="recent-orders">
+            <div class="card-header">
+                <h3>Our Active Menu</h3>
+                <button class="btn btn-primary" style="padding: 8px 15px; border-radius: 8px; font-size: 14px;"><i
+                        class="fas fa-plus"></i> Add Item</button>
+            </div>
+            <table class="orders-table">
+                <thead>
+                    <tr>
+                        <th>Item Image</th>
+                        <th>Item Name</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=50&h=50&fit=crop"
+                                style="border-radius: 8px;"></td>
+                        <td>Special Burger</td>
+                        <td>$8.99</td>
+                        <td><span class="status completed">Available</span></td>
+                        <td><button class="btn"
+                                style="background: transparent; color: var(--primary-color); box-shadow: none;">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=50&h=50&fit=crop"
+                                style="border-radius: 8px;"></td>
+                        <td>Wood-fired Pizza</td>
+                        <td>$14.50</td>
+                        <td><span class="status completed">Available</span></td>
+                        <td><button class="btn"
+                                style="background: transparent; color: var(--primary-color); box-shadow: none;">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=50&h=50&fit=crop"
+                                style="border-radius: 8px;"></td>
+                        <td>Healthy Bowl</td>
+                        <td>$5.50</td>
+                        <td><span class="status cancelled">Sold Out</span></td>
+                        <td><button class="btn"
+                                style="background: transparent; color: var(--primary-color); box-shadow: none;">Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Add Driver Modal -->
+    <div id="driverModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 style="margin-bottom: 20px; color: var(--secondary-color);">Add Delivery Driver</h2>
+            <form id="addDriverForm">
+                <div class="form-group">
+                    <label>Driver Name</label>
+                    <input type="text" id="driverName" required placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                    <label>Living Address</label>
+                    <input type="text" id="driverAddress" required placeholder="Enter home address">
+                </div>
+                <div class="form-group">
+                    <label>Vehicle Type</label>
+                    <input type="text" id="driverVehicle" required placeholder="e.g. Motorcycle, Bicycle">
+                </div>
+                <div class="form-group">
+                    <label>Login Username</label>
+                    <input type="text" id="driverUsername" required placeholder="Unique username">
+                </div>
+                <div class="form-group">
+                    <label>Login Password</label>
+                    <input type="password" id="driverPassword" required placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 8px;">Create Driver
+                    Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('foodied_username');
+            localStorage.removeItem('foodied_role');
+            window.location.href = 'SignUp_LogIn_Form.html#login';
+        });
+
+        // Basic protection check and load data
+        const storedRole = localStorage.getItem('foodied_role');
+        const storedUsername = localStorage.getItem('foodied_username');
+
+        if (storedRole !== 'hotel_manager' || !storedUsername) {
+            alert('Unauthorized Access! Hotel Manager privileges required.');
+            window.location.href = 'SignUp_LogIn_Form.html#login';
+        } else {
+            // Load custom manager data
+            const users = JSON.parse(localStorage.getItem('foodied_auth_users')) || {};
+            const managerData = users[storedUsername];
+
+            if (managerData && managerData.details) {
+                document.getElementById('mgrNameDisplay').textContent = managerData.details.name;
+                document.getElementById('mgrUsernameDisplay').textContent = storedUsername;
+                document.getElementById('restaurantTypeDisplay').textContent = managerData.details.restaurantType;
+                document.getElementById('locationDisplay').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${managerData.details.location}`;
+                document.getElementById('profileImg').src = `https://ui-avatars.com/api/?name=${managerData.details.name}&background=FF6B35&color=fff`;
+
+                // Show driver card and add driver button if they have drivers
+                if (managerData.details.hasDriver) {
+                    document.getElementById('driverStatCard').style.display = 'flex';
+                    document.getElementById('addDriverBtn').style.display = 'block';
+                }
+            }
+        }
+
+        // Modal Logic
+        const modal = document.getElementById("driverModal");
+        const btn = document.getElementById("addDriverBtn");
+        const span = document.getElementsByClassName("close-modal")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "flex";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Form Submission Logic
+        document.getElementById('addDriverForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('driverUsername').value.trim();
+            const password = document.getElementById('driverPassword').value;
+            const name = document.getElementById('driverName').value.trim();
+            const address = document.getElementById('driverAddress').value.trim();
+            const vehicle = document.getElementById('driverVehicle').value.trim();
+
+            // Get existing users
+            const users = JSON.parse(localStorage.getItem('foodied_auth_users')) || {};
+
+            if (users[username]) {
+                alert('Username already exists. Please choose another.');
+                return;
+            }
+
+            // Save as driver role
+            users[username] = {
+                password: password,
+                role: 'driver',
+                details: {
+                    name: name,
+                    address: address,
+                    vehicle: vehicle,
+                    employer: storedUsername // Tie them to this hotel manager
+                }
+            };
+
+            localStorage.setItem('foodied_auth_users', JSON.stringify(users));
+            alert(`Driver ${name} created successfully! They can now log in with username '${username}'.`);
+
+            // cleanup
+            document.getElementById('addDriverForm').reset();
+            modal.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>

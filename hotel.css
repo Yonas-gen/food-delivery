@@ -1,0 +1,21 @@
+/* Hotel Manager Specific CSS extensions to admin.css */
+
+.sidebar-logo {
+    padding: 20px 30px;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active {
+    background: rgba(255, 107, 53, 0.1);
+    color: var(--primary-orange);
+    border-right: 4px solid var(--primary-orange);
+}
+
+.admin-header h2 {
+    margin-bottom: 5px;
+}
+
+/* Ensure the manager profile uses the secondary theme color distinctively */
+.admin-profile img {
+    border-color: var(--primary-orange);
+}

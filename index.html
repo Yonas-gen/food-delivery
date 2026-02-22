@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODIED - Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Hero Background Shape -->
+    <div class="hero-bg-shape"></div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <a href="#" class="logo">FOODIED</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-icons">
+            <!-- <div class="icon"><i class="fas fa-search"></i></div> -->
+            <div class="icon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">2</span>
+            </div>
+            <a href="SignUp_LogIn_Form.html#register" class="btn btn-signup">Sign up</a>
+            <a href="SignUp_LogIn_Form.html#login" class="btn btn-login">Login</a>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-tag">Hungry?</div>
+            <h1 class="hero-title">JUST COME TO<br>FOODIED & ORDER</h1>
+            <p class="hero-text">Here You Will Find All Kinds Of Food. Check Out To Get All Your Hunger Things.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Order Now</a>
+                <a href="#menu" class="btn btn-secondary explore-btn">Explore More <span class="play-icon"><i
+                            class="fas fa-play"></i></span></a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <!-- Center Main Food -->
+            <div class="main-food-circle">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=500&fit=crop"
+                    alt="Healthy Food Bowl">
+            </div>
+
+            <div class="orbit-circle">
+                <!-- Decorative leaves -->
+                <img src="https://images.unsplash.com/photo-1620706857370-e1b9770e8bb1?w=100&h=100&fit=crop" alt="Leaf"
+                    class="floating-leaf leaf-1" style="border-radius: 50%;">
+                <img src="https://images.unsplash.com/photo-1620706857370-e1b9770e8bb1?w=100&h=100&fit=crop" alt="Leaf"
+                    class="floating-leaf leaf-2" style="border-radius: 50%;">
+                <img src="https://images.unsplash.com/photo-1620706857370-e1b9770e8bb1?w=100&h=100&fit=crop" alt="Leaf"
+                    class="floating-leaf leaf-3" style="border-radius: 50%;">
+                <img src="https://images.unsplash.com/photo-1620706857370-e1b9770e8bb1?w=100&h=100&fit=crop" alt="Leaf"
+                    class="floating-leaf leaf-4" style="border-radius: 50%;">
+
+                <!-- Orbiting items -->
+                <div class="orbit-item" style="top: -15px; left: 50%; transform: translateX(-50%);"><img
+                        src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=100&h=100&fit=crop" alt="Food">
+                </div>
+                <div class="orbit-item" style="top: 15%; right: -5px;"><img
+                        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=100&h=100&fit=crop"
+                        alt="Food"></div>
+                <div class="orbit-item" style="bottom: 15%; right: -5px;"><img
+                        src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=100&h=100&fit=crop"
+                        alt="Food"></div>
+                <div class="orbit-item" style="bottom: -15px; left: 50%; transform: translateX(-50%);"><img
+                        src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=100&h=100&fit=crop"
+                        alt="Food"></div>
+                <div class="orbit-item" style="bottom: 15%; left: -5px;"><img
+                        src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=100&h=100&fit=crop" alt="Food">
+                </div>
+                <!-- <div class="orbit-item" style="top: 15%; left: -5px;"><img
+                        src="https://images.unsplash.com/photo-1563805042-7684c8a9e9cf?w=100&h=100&fit=crop" alt="Food">
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Foods Section (4 Cards) -->
+    <section class="top-foods">
+        <div class="top-cards-grid">
+            <!-- Card 1 -->
+            <div class="food-card">
+                <div class="food-img-circle">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&h=200&fit=crop"
+                        alt="Chicken Burger">
+                </div>
+                <h3>Chicken burger</h3>
+                <p>This is an excellent chicken burger that is very healthy.</p>
+                <div class="card-footer">
+                    <span class="price">$3.50</span>
+                    <button class="btn btn-primary btn-buy">Buy Now</button>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="food-card">
+                <div class="food-img-circle">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200&h=200&fit=crop"
+                        alt="Chicken Pizza">
+                </div>
+                <h3>Chicken Pizza</h3>
+                <p>This is an excellent chicken pizza that is very healthy.</p>
+                <div class="card-footer">
+                    <span class="price">$5.50</span>
+                    <button class="btn btn-primary btn-buy">Buy Now</button>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="food-card">
+                <div class="food-img-circle">
+                    <img src="https://images.unsplash.com/photo-1623689048105-a17b1e1930b8?w=200&h=200&fit=crop"
+                        alt="Chicken Rice">
+                </div>
+                <h3>Chicken rice</h3>
+                <p>This is an excellent chicken rice that is very healthy.</p>
+                <div class="card-footer">
+                    <span class="price">$4.50</span>
+                    <button class="btn btn-primary btn-buy">Buy Now</button>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="food-card">
+                <div class="food-img-circle">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c8a9e9cf?w=200&h=200&fit=crop"
+                        alt="Special Dessert">
+                </div>
+                <h3>Special Dessert</h3>
+                <p>This is an excellent special dessert that is very healthy.</p>
+                <div class="card-footer">
+                    <span class="price">$8.50</span>
+                    <button class="btn btn-primary btn-buy">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features" id="about">
+        <div class="section-header">
+            <h2>WHY CHOOSE US?</h2>
+            <p>You can choose us because we give the best quality food.<br>Here are some of the reasons.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-bowl-rice"></i></div>
+                <h3>Serve Healthy Food</h3>
+                <p>We serve extravagantly cooked food focusing on taste and nutrition.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-file-invoice"></i></div> <!-- Folder/badge icon -->
+                <h3>Best Quality</h3>
+                <p>Our quality ingredients will make your experience better.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                <h3>Fast Delivery</h3>
+                <p>Fast delivery to ensure your food is fresh and hot right to your door.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Menu -->
+    <section class="special-menu" id="menu">
+        <div class="section-header">
+            <h2>SPECIAL MENU</h2>
+            <p>Here is our special food menu for you. Here are some of the foods<br>that I think you can definitely love
+                them.</p>
+        </div>
+        <div class="special-menu-grid">
+            <!-- Item 1 -->
+            <div class="special-card">
+                <div class="special-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=300&fit=crop"
+                        alt="Salads">
+                </div>
+                <div class="special-content">
+                    <h3>Salads</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(160)</span>
+                    </div>
+                    <div class="special-footer">
+                        <span class="price">$2.50</span>
+                        <button class="btn-add"><i class="fas fa-shopping-bag"></i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="special-card">
+                <div class="special-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300&h=300&fit=crop"
+                        alt="Egg Masala">
+                </div>
+                <div class="special-content">
+                    <h3>Egg Masala</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(145)</span>
+                    </div>
+                    <div class="special-footer">
+                        <span class="price">$3.40</span>
+                        <button class="btn-add"><i class="fas fa-shopping-bag"></i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="special-card">
+                <div class="special-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=300&h=300&fit=crop"
+                        alt="Fried Fish">
+                </div>
+                <div class="special-content">
+                    <h3>Fried Fish</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(120)</span>
+                    </div>
+                    <div class="special-footer">
+                        <span class="price">$4.00</span>
+                        <button class="btn-add with-text"><i class="fas fa-plus"></i>1</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- Regular Food Section -->
+    <section class="regular-food">
+        <div class="section-header">
+            <h2>OUR REGULAR FOOD</h2>
+            <p>Our daily base lot filled out ordinary choices.<br>Just checking on checkout to add extra.</p>
+        </div>
+        <div class="regular-food-grid">
+            <!-- Card 1 -->
+            <div class="regular-card">
+                <div class="regular-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&h=300&fit=crop"
+                        alt="Salads">
+                </div>
+                <div class="special-content">
+                    <h3>Salads</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(100)</span>
+                    </div>
+                    <p class="desc">This is a great green salad that is very healthy. We suggest it with your meals.</p>
+                    <div class="special-footer">
+                        <span class="price">$3.50</span>
+                        <button class="btn btn-primary btn-buy-small">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="regular-card">
+                <div class="regular-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=300&h=300&fit=crop"
+                        alt="Chicken Masala">
+                </div>
+                <div class="special-content">
+                    <h3>Chicken Masala</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(142)</span>
+                    </div>
+                    <p class="desc">This is an excellent chicken masala that is very healthy with your meals.</p>
+                    <div class="special-footer">
+                        <span class="price">$4.00</span>
+                        <button class="btn btn-primary btn-buy-small">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="regular-card">
+                <div class="regular-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1544025162-8315ea070d58?w=300&h=300&fit=crop"
+                        alt="Mutton Kheema">
+                </div>
+                <div class="special-content">
+                    <h3>Mutton Kheema</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(135)</span>
+                    </div>
+                    <p class="desc">This is a great mutton kheema that is very healthy with your meals.</p>
+                    <div class="special-footer">
+                        <span class="price">$4.50</span>
+                        <button class="btn btn-primary btn-buy-small">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="regular-card">
+                <div class="regular-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=300&h=300&fit=crop"
+                        alt="Beef Pasta">
+                </div>
+                <div class="special-content">
+                    <h3>Beef Pasta</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(170)</span>
+                    </div>
+                    <p class="desc">This is an excellent beef pasta that is very healthy and good for every meal.</p>
+                    <div class="special-footer">
+                        <span class="price">$3.50</span>
+                        <button class="btn btn-primary btn-buy-small">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="regular-card">
+                <div class="regular-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=300&h=300&fit=crop"
+                        alt="Chicken Fry">
+                </div>
+                <div class="special-content">
+                    <h3>Chicken Fry</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(115)</span>
+                    </div>
+                    <p class="desc">This is an excellent chicken fry that is very healthy for standard meals.</p>
+                    <div class="special-footer">
+                        <span class="price">$6.00</span>
+                        <button class="btn btn-primary btn-buy-small">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="regular-card">
+                <div class="regular-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c8a9e9cf?w=300&h=300&fit=crop"
+                        alt="Special Dessert">
+                </div>
+                <div class="special-content">
+                    <h3>Special Dessert</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(195)</span>
+                    </div>
+                    <p class="desc">This is an excellent special dessert that is very healthy. Available on order.</p>
+                    <div class="special-footer">
+                        <span class="price">$3.50</span>
+                        <button class="btn btn-primary btn-buy-small">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- Chefs Section -->
+    <section class="chefs">
+        <div class="section-header">
+            <h2>OUR SPECIAL CHEF'S</h2>
+            <p>Always making some special dishes for you.<br>Specially your taste.</p>
+        </div>
+        <div class="chefs-grid">
+            <div class="chef-card">
+                <!-- Using portrait images of chefs -->
+                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&h=500&fit=crop"
+                    alt="Chef 1">
+            </div>
+            <div class="chef-card center">
+                <img src="https://images.unsplash.com/photo-1622026139414-bbf777e56214?w=400&h=500&fit=crop"
+                    alt="Chef 2">
+            </div>
+            <div class="chef-card">
+                <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=500&fit=crop"
+                    alt="Chef 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3 class="footer-title">Menu</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Why Choose</a></li>
+                    <li><a href="#">Special Menu</a></li>
+                    <li><a href="#">Regular Food</a></li>
+                    <li><a href="#">Special Chefs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Help</h3>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="#">Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Contact</h3>
+                <ul>
+                    <li><a href="#">+123 456 789</a></li>
+                    <li><a href="#">info@foodied.com</a></li>
+                    <li><a href="#">1234 New York, USA</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter">
+                <h3 class="footer-title">Subscribe Our Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

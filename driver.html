@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODIED - Delivery Driver</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="driver.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="admin-page">
+
+    <!-- Sidebar -->
+    <div class="sidebar driver-sidebar">
+        <div class="sidebar-logo">
+            <a href="index.html" class="logo">FOODIED</a>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active"><i class="fas fa-motorcycle"></i> My Deliveries</a></li>
+            <li><a href="#"><i class="fas fa-history"></i> History</a></li>
+            <li><a href="#"><i class="fas fa-wallet"></i> Earnings</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="SignUp_LogIn_Form.html#login" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Topbar -->
+        <header class="admin-header">
+            <div class="header-left">
+                <h2>Hello, <span id="driverNameDisplay">Driver</span> <i class="fas fa-hand-sparkles"
+                        style="color: #F6E05E;"></i></h2>
+                <p id="vehicleDisplay" style="color: var(--text-muted); font-size: 14px;"><i class="fas fa-bicycle"></i>
+                    Vehicle</p>
+            </div>
+            <div class="header-right">
+                <div class="driver-status">
+                    <span class="status-dot"></span> Online
+                </div>
+                <div class="admin-profile">
+                    <img src="https://ui-avatars.com/api/?name=Driver&background=4ECDC4&color=fff" id="profileImg"
+                        alt="Driver" class="profile-img">
+                    <span id="driverUsernameDisplay">Driver</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(78, 205, 196, 0.2); color: #4ECDC4;">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Today's Deliveries</h3>
+                    <p>12</p>
+                    <span class="trend positive">Excellent Pace</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(255, 107, 53, 0.2); color: #FF6B35;">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Today's Tips</h3>
+                    <p>$45.50</p>
+                    <span class="trend positive"><i class="fas fa-arrow-up"></i> 15%</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(255, 71, 87, 0.2); color: #FF4757;">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Customer Rating</h3>
+                    <p>4.9</p>
+                    <span class="trend neutral">Keep it up!</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Active Deliveries -->
+        <div class="recent-orders">
+            <div class="card-header">
+                <h3>Current Route</h3>
+            </div>
+            <table class="orders-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Restaurant</th>
+                        <th>Customer Address</th>
+                        <th>Est. Time</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#DLV-082</td>
+                        <td><strong id="employerDisplay">Restaurant</strong></td>
+                        <td>456 Maple Street, Apt 2B</td>
+                        <td><span class="status pending">15 mins</span></td>
+                        <td><button class="btn btn-primary"
+                                style="padding: 6px 15px; border-radius: 6px; box-shadow: none;">Navigate</button></td>
+                    </tr>
+                    <tr>
+                        <td>#DLV-083</td>
+                        <td><strong class="employerText">Restaurant</strong></td>
+                        <td>789 Oak Avenue, House</td>
+                        <td><span class="status pending">30 mins</span></td>
+                        <td><button class="btn btn-primary"
+                                style="padding: 6px 15px; border-radius: 6px; box-shadow: none;">Navigate</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('foodied_username');
+            localStorage.removeItem('foodied_role');
+            window.location.href = 'SignUp_LogIn_Form.html#login';
+        });
+
+        // Basic protection check and load data
+        const storedRole = localStorage.getItem('foodied_role');
+        const storedUsername = localStorage.getItem('foodied_username');
+
+        if (storedRole !== 'driver' || !storedUsername) {
+            alert('Unauthorized Access! Driver privileges required.');
+            window.location.href = 'SignUp_LogIn_Form.html#login';
+        } else {
+            // Load custom driver data
+            const users = JSON.parse(localStorage.getItem('foodied_auth_users')) || {};
+            const driverData = users[storedUsername];
+
+            if (driverData && driverData.details) {
+                document.getElementById('driverNameDisplay').textContent = driverData.details.name;
+                document.getElementById('driverUsernameDisplay').textContent = storedUsername;
+
+                // Vehicle formatting
+                const vehicle = driverData.details.vehicle.toLowerCase();
+                let icon = 'fa-motorcycle';
+                if (vehicle.includes('bike') || vehicle.includes('bicycle')) icon = 'fa-bicycle';
+                if (vehicle.includes('car')) icon = 'fa-car';
+
+                document.getElementById('vehicleDisplay').innerHTML = `<i class="fas ${icon}"></i> ${driverData.details.vehicle}`;
+                document.getElementById('profileImg').src = `https://ui-avatars.com/api/?name=${driverData.details.name}&background=4ECDC4&color=fff`;
+
+                // Employer formatting
+                const employerData = users[driverData.details.employer];
+                const employerName = employerData ? employerData.details.restaurantType : "Assigned Restaurant";
+                document.getElementById('employerDisplay').textContent = employerName;
+                document.querySelectorAll('.employerText').forEach(el => el.textContent = employerName);
+            }
+        }
+    </script>
+</body>
+
+</html>

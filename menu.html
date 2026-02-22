@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODIED - Menu</title>
+    <!-- Use both the main styles and specific menu styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="menu-page">
+
+    <!-- Header Section (Matching index.html) -->
+    <header class="header">
+        <a href="index.html" class="logo">FOODIED</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="menu.html" class="active">Menu</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="header-icons">
+            <div class="user-profile">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop"
+                    alt="User Profile" class="profile-img">
+                <div class="profile-info">
+                    <p class="welcome">Welcome Back,</p>
+                    <p class="name">Yonas</p>
+                </div>
+            </div>
+            <div class="icon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">2</span>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Hero / Search Section -->
+    <section class="menu-hero">
+        <div class="menu-hero-bg">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&h=600&fit=crop"
+                alt="Food Banner">
+            <div class="overlay"></div>
+        </div>
+        <div class="search-container">
+            <h1>What are you craving?</h1>
+            <div class="searchbar">
+                <input type="text" placeholder="Search for resturants, foods, burgers, pizza...">
+                <button class="btn btn-primary search-btn"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Grid Section -->
+    <section class="menu-items-section">
+        <div class="section-header">
+            <h2>OUR MENU</h2>
+            <p>Explore our delicious variety of foods carefully prepared for you.</p>
+        </div>
+
+        <div class="menu-grid">
+            <!-- Card 1 -->
+            <div class="regular-card">
+                <div class="regular-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&h=300&fit=crop"
+                        alt="Salad">
+                </div>
+                <div class="special-content">
+                    <h3>Healthy Salad</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(120)</span>
+                    </div>
+                    <p class="desc">Fresh greens mixed with nuts and light dressing.</p>
+                    <div class="special-footer">
+                        <span class="price">$5.50</span>
+                        <button class="btn btn-primary btn-buy-small">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="regular-card">
+                <div class="regular-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=300&fit=crop"
+                        alt="Burger">
+                </div>
+                <div class="special-content">
+                    <h3>Classic Burger</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <span>(340)</span>
+                    </div>
+                    <p class="desc">Juicy beef patty with fresh lettuce, tomato, and cheese.</p>
+                    <div class="special-footer">
+                        <span class="price">$8.99</span>
+                        <button class="btn btn-primary btn-buy-small">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="regular-card">
+                <div class="regular-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300&h=300&fit=crop"
+                        alt="Pizza">
+                </div>
+                <div class="special-content">
+                    <h3>Pepperoni Pizza</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(215)</span>
+                    </div>
+                    <p class="desc">Wood-fired pizza with premium pepperoni and mozzarella.</p>
+                    <div class="special-footer">
+                        <span class="price">$14.50</span>
+                        <button class="btn btn-primary btn-buy-small">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="regular-card">
+                <div class="regular-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=300&h=300&fit=crop"
+                        alt="Pasta">
+                </div>
+                <div class="special-content">
+                    <h3>Beef Pasta</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="far fa-star"></i>
+                        <span>(95)</span>
+                    </div>
+                    <p class="desc">Rich tomato sauce with ground beef over penne pasta.</p>
+                    <div class="special-footer">
+                        <span class="price">$11.20</span>
+                        <button class="btn btn-primary btn-buy-small">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="regular-card">
+                <div class="regular-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1623689048105-a17b1e1930b8?w=300&h=300&fit=crop"
+                        alt="Rice">
+                </div>
+                <div class="special-content">
+                    <h3>Chicken Rice Bowl</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <span>(150)</span>
+                    </div>
+                    <p class="desc">Grilled chicken breast served over seasoned brown rice.</p>
+                    <div class="special-footer">
+                        <span class="price">$9.50</span>
+                        <button class="btn btn-primary btn-buy-small">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="regular-card">
+                <div class="regular-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c8a9e9cf?w=300&h=300&fit=crop"
+                        alt="Dessert">
+                </div>
+                <div class="special-content">
+                    <h3>Chocolate Dessert</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(280)</span>
+                    </div>
+                    <p class="desc">Decadent chocolate lava cake with vanilla ice cream.</p>
+                    <div class="special-footer">
+                        <span class="price">$6.00</span>
+                        <button class="btn btn-primary btn-buy-small">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Matched with index.html) -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3 class="footer-title">Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">Why Choose</a></li>
+                    <li><a href="menu.html">Special Menu</a></li>
+                    <li><a href="menu.html">Regular Food</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Help</h3>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="#">Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Contact</h3>
+                <ul>
+                    <li><a href="#">+123 456 789</a></li>
+                    <li><a href="#">info@foodied.com</a></li>
+                    <li><a href="#">1234 New York, USA</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter">
+                <h3 class="footer-title">Subscribe Our Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODIED - Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="admin-page">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            <a href="index.html" class="logo">FOODIED</a>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-hamburger"></i> Menu Items</a></li>
+            <li><a href="#"><i class="fas fa-users"></i> Customers</a></li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="SignUp_LogIn_Form.html#login" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Topbar -->
+        <header class="admin-header">
+            <div class="header-left">
+                <h2>Dashboard Overview</h2>
+            </div>
+            <div class="header-right">
+                <button id="addManagerBtn" class="btn btn-primary" style="padding: 10px 20px; border-radius: 8px;"><i
+                        class="fas fa-plus"></i> Add Hotel Manager</button>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="admin-profile">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=8CC63F&color=fff" alt="Admin"
+                        class="profile-img">
+                    <span>Admin User</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(140, 198, 63, 0.2); color: #8CC63F;">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Total Orders</h3>
+                    <p>1,284</p>
+                    <span class="trend positive"><i class="fas fa-arrow-up"></i> 12%</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(255, 107, 53, 0.2); color: #FF6B35;">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Total Revenue</h3>
+                    <p>$45,231</p>
+                    <span class="trend positive"><i class="fas fa-arrow-up"></i> 8%</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(78, 205, 196, 0.2); color: #4ECDC4;">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Total Customers</h3>
+                    <p>8,549</p>
+                    <span class="trend positive"><i class="fas fa-arrow-up"></i> 24%</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(255, 71, 87, 0.2); color: #FF4757;">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Avg Rating</h3>
+                    <p>4.8</p>
+                    <span class="trend neutral"><i class="fas fa-minus"></i> 0%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Orders Table -->
+        <div class="recent-orders">
+            <div class="card-header">
+                <h3>Recent Orders</h3>
+                <button class="btn btn-primary" style="padding: 8px 15px; border-radius: 8px; font-size: 14px;">View
+                    All</button>
+            </div>
+            <table class="orders-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Menu Item</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#ORD-001</td>
+                        <td>
+                            <div class="customer-info">
+                                <img src="https://ui-avatars.com/api/?name=John+Doe&background=random" alt="John">
+                                <span>John Doe</span>
+                            </div>
+                        </td>
+                        <td>Classic Burger</td>
+                        <td>$8.99</td>
+                        <td><span class="status completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>#ORD-002</td>
+                        <td>
+                            <div class="customer-info">
+                                <img src="https://ui-avatars.com/api/?name=Jane+Smith&background=random" alt="Jane">
+                                <span>Jane Smith</span>
+                            </div>
+                        </td>
+                        <td>Pepperoni Pizza</td>
+                        <td>$14.50</td>
+                        <td><span class="status pending">Preparing</span></td>
+                    </tr>
+                    <tr>
+                        <td>#ORD-003</td>
+                        <td>
+                            <div class="customer-info">
+                                <img src="https://ui-avatars.com/api/?name=Mike+Johnson&background=random" alt="Mike">
+                                <span>Mike Johnson</span>
+                            </div>
+                        </td>
+                        <td>Healthy Salad</td>
+                        <td>$5.50</td>
+                        <td><span class="status pending">Preparing</span></td>
+                    </tr>
+                    <tr>
+                        <td>#ORD-004</td>
+                        <td>
+                            <div class="customer-info">
+                                <img src="https://ui-avatars.com/api/?name=Sarah+W&background=random" alt="Sarah">
+                                <span>Sarah Williams</span>
+                            </div>
+                        </td>
+                        <td>Chocolate Dessert</td>
+                        <td>$6.00</td>
+                        <td><span class="status cancelled">Cancelled</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Add Hotel Manager Modal -->
+    <div id="managerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 style="margin-bottom: 20px; color: var(--secondary-color);">Add Hotel Manager</h2>
+            <form id="addManagerForm">
+                <div class="form-group">
+                    <label>Manager Name</label>
+                    <input type="text" id="mgrName" required placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                    <label>Restaurant Type</label>
+                    <input type="text" id="mgrType" required placeholder="e.g. Fast Food, Fine Dining">
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" id="mgrLocation" required placeholder="Enter address">
+                </div>
+                <div class="form-group">
+                    <label>Login Username</label>
+                    <input type="text" id="mgrUsername" required placeholder="Unique username">
+                </div>
+                <div class="form-group">
+                    <label>Login Password</label>
+                    <input type="password" id="mgrPassword" required placeholder="Password">
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="mgrDriver">
+                    <label for="mgrDriver">Has Food Delivery Driver</label>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 8px;">Create Manager
+                    Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('foodied_username');
+            localStorage.removeItem('foodied_role');
+            window.location.href = 'SignUp_LogIn_Form.html#login';
+        });
+
+        // Basic protection check
+        const storedRole = localStorage.getItem('foodied_role');
+        if (storedRole !== 'admin') {
+            alert('Unauthorized Access! Admin privileges required.');
+            window.location.href = 'SignUp_LogIn_Form.html#login';
+        }
+
+        // Modal Logic
+        const modal = document.getElementById("managerModal");
+        const btn = document.getElementById("addManagerBtn");
+        const span = document.getElementsByClassName("close-modal")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "flex";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Form Submission Logic
+        document.getElementById('addManagerForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('mgrUsername').value.trim();
+            const password = document.getElementById('mgrPassword').value;
+            const name = document.getElementById('mgrName').value.trim();
+            const type = document.getElementById('mgrType').value.trim();
+            const location = document.getElementById('mgrLocation').value.trim();
+            const hasDriver = document.getElementById('mgrDriver').checked;
+
+            // Get existing users
+            const users = JSON.parse(localStorage.getItem('foodied_auth_users')) || {};
+
+            if (users[username]) {
+                alert('Username already exists. Please choose another.');
+                return;
+            }
+
+            // Save as hotel_manager role
+            users[username] = {
+                password: password,
+                role: 'hotel_manager',
+                details: {
+                    name: name,
+                    restaurantType: type,
+                    location: location,
+                    hasDriver: hasDriver
+                }
+            };
+
+            localStorage.setItem('foodied_auth_users', JSON.stringify(users));
+            alert(`Hotel Manager ${name} created successfully! They can now log in with username '${username}'.`);
+
+            // cleanup
+            document.getElementById('addManagerForm').reset();
+            modal.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>
